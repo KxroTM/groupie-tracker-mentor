@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/song.css">
+    <link rel="stylesheet" href="../styles/song.css">
+    <title>{{song.name}}</title>
+</head>
+<body>
+    <div class="body">
+        <button class="back">&larr; Retour aux titres</button>
+        <div class="b1">
+            <img src="" alt="">
+            <div class="content">
+                <div class="infos">
+                    <h1 class="title">{{song.name}}</h1>
+                    <hr>
+                    <div class="details">
+                        <div class="artiste">
+                            <span>ARTISTE</span>
+                            <h5>{{song.artiste}}</h5>
+                        </div>
+                        <div class="album">
+                            <span>ALBUM</span>
+                            <h5>{{song.album}}</h5>
+                        </div>
+                        <div class="date">
+                            <span>DATE DE SORTIE</span>
+                            <h5>{{song.date}}</h5>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="buttons">
+                        <button class="spotify"><a href="{{song.link}}">Ouvrir sur Spotify &#8599;</a></button>
+                        <button class="gethome"><a href="/">Voir tous les titres</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

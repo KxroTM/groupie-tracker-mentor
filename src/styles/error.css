@@ -1,0 +1,121 @@
+body {
+   font-family: 'DM Sans', system-ui, sans-serif;
+   background-color: #0B1220;
+   margin: 0;
+}
+
+.body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.main {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #0B1220;
+}
+
+.notfound {
+   background-color: #FF7A45;
+}
+
+.spotifyerror {
+   background-color: #7CC7E0;
+}
+
+.errorcontent {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 20px;
+   max-width: 620px;
+   padding: 64px 24px;
+}
+
+.code {
+   font-family: 'Unbounded', sans-serif;
+   font-size: 220px;
+   font-weight: 700;
+   line-height: 0.85;
+   letter-spacing: -0.06em;
+   margin: 0;
+}
+
+.errortitle {
+   font-family: 'Unbounded', sans-serif;
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 1.1;
+   letter-spacing: -0.03em;
+   margin: 0;
+}
+
+.errortext {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 1.5;
+   margin: 0;
+}
+
+.icon {
+   width: 96px;
+   height: 96px;
+   border-radius: 50%;
+   background-color: #0B1220;
+   color: #7CC7E0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.badge {
+   background-color: #0B1220;
+   color: #EAF0F8;
+   font-size: 13px;
+   font-weight: 700;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+   padding: 8px 14px;
+   border-radius: 999px;
+}
+
+.buttons {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 14px;
+   margin-top: 8px;
+}
+
+.retry,
+.home {
+   height: 56px;
+   box-sizing: border-box;
+   padding: 0 28px;
+   display: inline-flex;
+   align-items: center;
+   border-radius: 999px;
+   border: 2px solid #0B1220;
+   font-size: 16px;
+   font-weight: 700;
+   text-decoration: none;
+}
+
+.retry {
+   background-color: #0B1220;
+   color: #EAF0F8;
+}
+
+.home {
+   background-color: transparent;
+   color: #0B1220;
+}
+
+.notfound .home {
+   background-color: #0B1220;
+   color: #EAF0F8;
+}

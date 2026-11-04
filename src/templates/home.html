@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Accueil</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1 class="name">JUL</h1>
+            <h5 class="subtitle">
+            Tous ses titres, singles et albums. Filtré par année, par type ou par feat.
+            </h5>
+            <button class="explore">Explorer les titres &#8595</button>
+        </div>
+        <div class="ppheader">
+            <img src="" alt="jujujul" class="pp">
+            <div class="lastsong">
+                <img src="" alt="" class="lastsongcover">
+                <div class="lastsongcoverinfo">
+                    <p class="uptitle">DERNIÈRE SORTIE</p>
+                    <p class="songtitle">{{song.name}}</p>
+                    <div class="lastsongcovermoreinfo">
+                        <p>{{song.date}}</p>
+                        <p>{{song.duration}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="content">
+            <div class="banner">
+                <h1 class="bannertitle">La zone, la <br> mer, les sons.</h1>
+            </div>
+            
+            <div class="filter">
+                <div class="selectors">
+                    <div class="datefilter">
+                        <span>Année de sortie</span>
+                        <select name="" id="">
+                            <option value="">Toutes les années</option>
+                        </select>
+                    </div>
+                    <div class="typefilter">
+                        <span>Type</span>
+                        <select name="" id="">
+                            <option value="">Single et album</option>
+                        </select>
+                    </div>
+                    <div class="featfilter">
+                        <span>Feat</span>
+                        <select name="" id="">
+                            <option value="">Avec ou sans feat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filtersubmit">
+                    <button class="filtrer">Filtrer</button>
+                    <button class="reset">Réinitialiser</button>
+                </div>
+            </div>
+           
+            <div class="gridsong">
+                <div class="categorie">
+                    <span class="spanTitle">Titres</span>
+                    <span class="spanResult">{{len(songs)}} résultats</span>
+                </div>
+                <div class="grid">
+                    {{for i song}}
+                    <div class="song" id="{{song.id}}">
+                        <img src="" alt="">
+                        <div class="songinfo">
+                            <h5>{{song.name}}</h5>
+                            <h6 class="songsingers">{{song.singers}}</h6>
+                            <h6>{{song.date}} . {{song.duration}}</h6>
+                        </div>
+                        <button class="songdetails">Voir le détail</button>
+                    </div>
+                    {{end for}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
