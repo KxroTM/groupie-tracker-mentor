@@ -1,9 +1,13 @@
 package models
 
 type Song struct {
-	name     string
-	image    string
-	date     string
-	artists  []string
-	duration string
+	ID          string
+	Name        string
+	Image       string
+	ReleaseDate string
+	Artists     []string
+	Duration    string
+	Type        string
+	AlbumName   string
+	SpotifyURL  string
 }
