@@ -1,7 +1,7 @@
 
 body {
    font-family: 'DM Sans', system-ui, sans-serif;
-   background-color: #0B1220;
+   background: radial-gradient(900px 600px at 100% 0%, rgba(255, 1, 32, 0.12), transparent 70%),#07080F;
    margin: 0;
 }
 
@@ -26,7 +26,7 @@ button {
 }
 
 .header {
-   background-color: #FF7A45 ;
+   background: radial-gradient(520px 420px at 62% 50%, rgba(255, 90, 40, 0.5), transparent 65%),radial-gradient(600px 380px at 92% 100%, rgba(12, 60, 181, 0.7), transparent 65%),radial-gradient(760px 560px at 0% 100%, rgba(7, 8, 15, 0.6), transparent 62%),radial-gradient(500px 380px at 0% 0%, rgba(150, 0, 20, 0.45), transparent 60%),#FF0120;   
    display: flex;
    flex-direction: row;
    height: 50vh;
@@ -43,7 +43,7 @@ button {
 }
 
 .name,.subtitle {
-   color: #0B1220;
+   color: #FFFFFF;
    position: relative;
    top: 20%;
 }
@@ -52,6 +52,7 @@ button {
    font-size: 160px;
    font-weight: 700;
    letter-spacing: -0.06em;
+   text-shadow: 6px 6px 0 #0C3CB5, 12px 12px 0 #F4A9DA;
 }
 
 .subtitle {
@@ -66,8 +67,8 @@ button {
 }
 
 .explore {
-   background-color: #0B1220;
-   color: #EAF0F8;
+   background-color: #2B3FE0;
+   color: #FFFFFF;
    position: relative;
    top: 20%;
    right: 20%;
@@ -82,41 +83,48 @@ button {
 .ppheader {
    display: flex;
    flex-direction: row;
-   align-items: center;
+   align-items: end;
+   justify-content: center;
    /* background-color: #0B1220; */
    width: 450px;
 }
 
-.ppheader img {
-   width: 80%;
-   height: 90%;
-   border: #0B1220, 3px;
-   background: radial-gradient(circle at 70% 18%, #FFB36B, transparent 50%),linear-gradient(170deg, #26407F, #0B1220 85%);
-   position:relative;
-   left: 5%;
-   top: 5%;
-   border-radius: 32px 32px 0 0;
+.pp {
+   width: auto;
+   height: 360px;
+   position: relative;
+   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%),linear-gradient(to bottom, transparent 0, #000 14%);
+   -webkit-mask-composite: source-in;
+   mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%),linear-gradient(to bottom, transparent 0, #000 14%);
+   mask-composite: intersect;
 }
 
 .lastsong {
    display: flex;
    flex-direction: row;
    position:absolute;
-   background-color: #121B2E;
-   border: 1px solid #34466A;
+   background-color: rgba(10, 11, 26, 0.92);
+   border: 1.5px solid #f4a9da;
+   box-shadow: 0 20px 40px rgba(10, 11, 26, 0.5);
    top: 40%;
-   width: 180px;
+   left: 54%;
+   width: 200px;
    height: 8%;
    border-radius: 18px;
 }
 
-.lastsongcover {
-   border-radius: 10px;
-   background: radial-gradient(circle at 28% 22%, #FFB36B, transparent 58%),radial-gradient(circle at 80% 85%, #E2547A, transparent 55%),linear-gradient(145deg, #1C2B6B, #0B1220);
+.lastsong img {
+   width: auto;
+   height: 90%;
+   border-radius: 18px;
+   margin-right:10px;
+   margin-left: 5px;
+   margin-top: 5px;
+   margin-bottom: 5px;
 }
 
 .uptitle {
-   color: #7CC7E0;
+   color: #F4A9DA;
    font-weight: 700;
    letter-spacing: 0.1em;
    text-transform: uppercase;
@@ -133,17 +141,18 @@ button {
 .lastsongcovermoreinfo {
    display: flex;
    flex-direction: row;
+   gap: 10px;
 }
 
 
 .songtitle {
-   color: #EAF0F8;
+   color: #F5F6FF;
    font-weight: 700;
    /* font-size: 18px; */
 }
 
 .lastsongcovermoreinfo p {
-   color: #9FB0C8;
+   color: #A9B2DA;
    /* font-size: 14px; */
    font-weight: 400;
 }
@@ -152,14 +161,15 @@ button {
    display: flex;
    flex-direction: column;
    align-items: center;
+   margin-bottom: 10%;
 }
 
 .content {
-   width: 80%;
+   width: 90%;
 }
 
 .banner {
-   background: radial-gradient(500px 300px at 85% 10%, rgba(226, 84, 122, 0.55), transparent 70%),linear-gradient(120deg, #10204F, #0B1220);
+   background: radial-gradient(420px 300px at 90% 15%, rgba(43, 63, 224, 0.75), transparent 70%),radial-gradient(380px 260px at 70% 100%, rgba(244, 169, 218, 0.35), transparent 70%),linear-gradient(115deg, #FF0120 0%, #C0001C 38%, #3A0612 70%, #07080F 100%);
    height: 200px;
    border-radius: 28px;
 }
@@ -175,7 +185,7 @@ button {
 }
 
 .filter {
-   background-color: #121B2E;
+   background-color: #121634;
    border: 1px solid #22304A;
    height: 80px;
    margin-top: 30px;
@@ -194,10 +204,10 @@ button {
    width: 80%;
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
 }
 
 .filter select {
+   margin-right: 20px;
    border: 1px solid #34466A;
    background-color: #0B1220;
    color: #EAF0F8;
@@ -221,12 +231,16 @@ button {
 }
 
 .filtersubmit {
-   padding-top: 30px;
+   padding-top: 8px;
    width: 25%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: end;
 }
 
 .filtrer {
-   background-color: #FF7A45;
+   background-color: #f4a9da;
    color: #0B1220;
    border: none;
    border-radius: 10px;
@@ -237,6 +251,8 @@ button {
 }
 
 .reset {
+   margin-left: 15px;
+   margin-right: 15px;
    color: #9FB0C8;
    background-color: transparent;
    border: none;
@@ -275,20 +291,24 @@ button {
 
 .grid {
    width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 25px;
 }
 
 .song {
-   width: 25%;
-   height: 300px;
-   background-color: #121B2E;
+   box-sizing: border-box;
+   height: 380px;
+   background-color: #121634;
    border: 1px solid #22304A;
    color: #EAF0F8;
    border-radius: 16px;
    display: flex;
    flex-direction: column;
-   align-items: center;
+   justify-content: space-between;
    padding-top: 2%;
    line-height: 0;
+   padding-left: 24px;
 }
 
 .song img {
@@ -296,10 +316,7 @@ button {
    height: 55%;
    background: radial-gradient(circle at 28% 22%, #FFB36B, transparent 58%),radial-gradient(circle at 80% 85%, #E2547A, transparent 55%),linear-gradient(145deg, #1C2B6B, #0B1220);
    border-radius: 10px;
-}
-
-.song button {
-   margin-bottom: 10px;
+   margin-left: 2px;
 }
 
 .songinfo h5 {
@@ -311,6 +328,7 @@ button {
    /* font-size: 15px; */
    font-weight: 400;
    color: #B7C5DA;
+   line-height: normal;
 }
 
 .songinfo h6:last-child {
@@ -320,12 +338,157 @@ button {
 }
 
 .songdetails {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
    background-color: transparent;
-   color: #FF7A45;
-   border: 1.5px solid #FF7A45;
+   color: #f4a9da;
+   border: 1.5px solid #f4a9da;
    border-radius: 10px;
    height: 33px;
-   width: 160px;
+   width: 87%;
    /* font-size: 15px; */
    font-weight: 700;
+   text-decoration: none;
+   margin-bottom: 8px;
+}
+
+
+/* ---------- Grand écran---------- */
+@media (min-width: 1400px) {
+   .content {
+      max-width: 1200px;
+   }
+
+   .subtitle {
+      width: 300px;
+      padding-left: 145px;
+   }
+
+   .explore {
+      margin-left: 245px;
+   }
+
+   .grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .lastsong {
+      left: 55%;
+   }
+
+   .pp {
+      right: 20%;
+      height: 400px;
+   }
+
+   .song {
+      padding-left: 30px;
+   }
+}
+
+
+/* ---------- Téléphone (600px et moins) ---------- */
+@media (max-width: 600px) {
+   .header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      padding: 30px 0 40px;
+   }
+
+   .title {
+      width: 90%;
+      margin-top: 0;
+   }
+
+   .name {
+      font-size: 64px;
+   }
+
+   .subtitle {
+      padding-top: 15px;
+      width: 80%;
+      right: 0;
+   }
+
+   .explore {
+      position: static;
+      margin-bottom: 20px;
+   }
+
+   .ppheader{
+      position: relative;
+      top: 40px;
+      width: 90%;
+   }
+
+   .content {
+      width: 92%;
+   }
+
+   .lastsong {
+      height: 70px;
+      position: absolute;
+      left: 0;
+      top: 260px;
+   }
+
+   .banner {
+      height: auto;
+      padding-bottom: 20px;
+      /* margin-left: 20px; */
+   }
+
+   .bannertitle {
+      font-size: 26px;
+      padding-top: 30px;
+      padding-left: 15px;
+   }
+
+   .filter {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 15px;
+      /* margin-left: 20px; */
+   }
+
+   .selectors {
+      width: 100%;
+      flex-direction: column;
+   }
+
+   .datefilter, .typefilter, .featfilter {
+      width: 100%;
+      margin-bottom: 12px;
+   }
+
+   .filter select {
+      width: 100%;
+   }
+
+   .filtersubmit {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding-top: 15px;
+   }
+
+   .spanTitle{
+      margin-top: 20px;
+      margin-left: 20px;
+   }
+   .spanResult {
+      margin-top: 30px;
+   }
+
+   .grid {
+      grid-template-columns: 1fr;
+   }
+
+   .song {
+      padding-left: 42px;
+   }
 }

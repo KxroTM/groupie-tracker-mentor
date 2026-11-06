@@ -1,6 +1,6 @@
 body {
    font-family: 'DM Sans', system-ui, sans-serif;
-   background-color: #0B1220;
+   background-color: #07080F;
    margin: 0;
 }
 
@@ -15,15 +15,22 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
-   color: #0B1220;
+   color: #FFFFFF;
 }
 
 .notfound {
-   background-color: #FF7A45;
+   background: radial-gradient(520px 420px at 50% 40%, rgba(255, 90, 40, 0.5), transparent 65%),
+               radial-gradient(600px 380px at 92% 100%, rgba(12, 60, 181, 0.7), transparent 65%),
+               radial-gradient(760px 560px at 0% 100%, rgba(7, 8, 15, 0.6), transparent 62%),
+               radial-gradient(500px 380px at 0% 0%, rgba(150, 0, 20, 0.45), transparent 60%),
+               #FF0120;
 }
 
 .spotifyerror {
-   background-color: #7CC7E0;
+   background: radial-gradient(520px 420px at 50% 35%, rgba(43, 63, 224, 0.55), transparent 65%),
+               radial-gradient(600px 380px at 8% 100%, rgba(255, 1, 32, 0.6), transparent 65%),
+               radial-gradient(500px 360px at 100% 0%, rgba(244, 169, 218, 0.35), transparent 62%),
+               #1A2BB0;
 }
 
 .errorcontent {
@@ -43,6 +50,7 @@ body {
    line-height: 0.85;
    letter-spacing: -0.06em;
    margin: 0;
+   text-shadow: 8px 8px 0 #0C3CB5, 16px 16px 0 #F4A9DA;
 }
 
 .errortitle {
@@ -54,6 +62,10 @@ body {
    margin: 0;
 }
 
+.spotifyerror .errortitle {
+   text-shadow: 4px 4px 0 #FF0120;
+}
+
 .errortext {
    font-size: 20px;
    font-weight: 500;
@@ -61,20 +73,24 @@ body {
    margin: 0;
 }
 
+.notfound .errortext {
+   font-weight: 700;
+}
+
 .icon {
    width: 96px;
    height: 96px;
    border-radius: 50%;
-   background-color: #0B1220;
-   color: #7CC7E0;
+   background-color: #07080F;
+   color: #F4A9DA;
    display: flex;
    align-items: center;
    justify-content: center;
 }
 
 .badge {
-   background-color: #0B1220;
-   color: #EAF0F8;
+   background-color: #F4A9DA;
+   color: #07080F;
    font-size: 13px;
    font-weight: 700;
    letter-spacing: 0.14em;
@@ -99,23 +115,35 @@ body {
    display: inline-flex;
    align-items: center;
    border-radius: 999px;
-   border: 2px solid #0B1220;
+   border: 2px solid #FFFFFF;
    font-size: 16px;
    font-weight: 700;
    text-decoration: none;
 }
 
 .retry {
-   background-color: #0B1220;
-   color: #EAF0F8;
+   background-color: #FFFFFF;
+   color: #07080F;
 }
 
 .home {
    background-color: transparent;
-   color: #0B1220;
+   color: #FFFFFF;
 }
 
 .notfound .home {
-   background-color: #0B1220;
-   color: #EAF0F8;
+   background-color: #2B3FE0;
+   border-color: #2B3FE0;
+   color: #FFFFFF;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 8px;
+   padding: 24px;
+   border-top: 1px solid #1C1F33;
+   font-size: 14px;
+   color: #A9B2DA;
 }
