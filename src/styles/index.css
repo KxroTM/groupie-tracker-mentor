@@ -388,6 +388,21 @@ button {
 }
 
 
+/* ---------- 1494.40 x 705.60 ---------- */
+@media (max-width: 1494.4px) and (max-height: 705.6px) {
+   .title {
+         margin-top: -50px;
+   }
+   .subtitle {
+      margin-left: -48px;
+   }
+   .explore {
+      margin-top: -18px;
+      margin-left: 155px;
+   }
+}
+
+
 /* ---------- Téléphone (600px et moins) ---------- */
 @media (max-width: 600px) {
    .header {

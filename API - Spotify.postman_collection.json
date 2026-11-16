@@ -1,0 +1,1178 @@
+{
+  "info": {
+    "_postman_id": "a3201332-b77c-4bcc-8691-97cce24d6abb",
+    "name": "API - Spotify",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40493323"
+  },
+  "item": [
+    {
+      "name": "Erreurs",
+      "item": [
+        {
+          "name": "Sans token",
+          "request": {
+            "auth": {
+              "type": "bearer"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "tracks",
+                "0SGwyiQe9u06OoNVvFjCT9"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Sans token",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "spotify",
+                    "com"
+                  ],
+                  "path": [
+                    "v1",
+                    "tracks",
+                    "0SGwyiQe9u06OoNVvFjCT9"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "JSON",
+              "header": [
+                {
+                  "key": "server-timing",
+                  "value": "edge;dur=",
+                  "type": "text"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000",
+                  "type": "text"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "type": "text"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "www-authenticate",
+                  "value": "Bearer realm=\"spotify\", error=\"missing_token\", error_description=\"No token provided\"",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-max-age",
+                  "value": "604800",
+                  "type": "text"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "94",
+                  "type": "text"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 06 Nov 2026 15:50:50 GMT",
+                  "type": "text"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy",
+                  "type": "text"
+                },
+                {
+                  "key": "via",
+                  "value": "HTTP/2 edgeproxy, 1.1 google",
+                  "type": "text"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "h3=\":443\"; ma=2592000",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": {\n        \"status\": 401,\n        \"message\": \"Missing/invalid/expired access token\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Token invalide",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "tokeninvalide",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "tracks",
+                "0SGwyiQe9u06OoNVvFjCT9"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Token invalide",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "spotify",
+                    "com"
+                  ],
+                  "path": [
+                    "v1",
+                    "tracks",
+                    "0SGwyiQe9u06OoNVvFjCT9"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": "JSON",
+              "header": [
+                {
+                  "key": "server-timing",
+                  "value": "edge;dur=",
+                  "type": "text"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000",
+                  "type": "text"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "type": "text"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "www-authenticate",
+                  "value": "Bearer realm=\"spotify\", error=\"invalid_token\", error_description=\"Invalid access token\"",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-methods",
+                  "value": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-headers",
+                  "value": "Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "access-control-max-age",
+                  "value": "604800",
+                  "type": "text"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "94",
+                  "type": "text"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 06 Nov 2026 15:51:05 GMT",
+                  "type": "text"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy",
+                  "type": "text"
+                },
+                {
+                  "key": "via",
+                  "value": "HTTP/2 edgeproxy, 1.1 google",
+                  "type": "text"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": {\n        \"status\": 401,\n        \"message\": \"Missing/invalid/expired access token\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Mauvais id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/tracks/cm36iRzoxbxU",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "tracks",
+                "cm36iRzoxbxU"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Mauvais id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.spotify.com/v1/tracks/mauvaisid",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "spotify",
+                    "com"
+                  ],
+                  "path": [
+                    "v1",
+                    "tracks",
+                    "mauvaisid"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "JSON",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "private, max-age=0",
+                  "type": "text"
+                },
+                {
+                  "key": "server-timing",
+                  "value": "edge;dur=8",
+                  "type": "text"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000",
+                  "type": "text"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "type": "text"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip",
+                  "type": "text"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 06 Nov 2026 15:51:31 GMT",
+                  "type": "text"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy",
+                  "type": "text"
+                },
+                {
+                  "key": "via",
+                  "value": "HTTP/2 edgeproxy, 1.1 google",
+                  "type": "text"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "h3=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Invalid base62 id\"\n    }\n}"
+            },
+            {
+              "name": "Mauvais id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://api.spotify.com/v1/tracks/cm36iRzoxbxU",
+                  "protocol": "https",
+                  "host": [
+                    "api",
+                    "spotify",
+                    "com"
+                  ],
+                  "path": [
+                    "v1",
+                    "tracks",
+                    "cm36iRzoxbxU"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "JSON",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8",
+                  "type": "text"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "private, max-age=0",
+                  "type": "text"
+                },
+                {
+                  "key": "server-timing",
+                  "value": "edge;dur=40",
+                  "type": "text"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000",
+                  "type": "text"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff",
+                  "type": "text"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip",
+                  "type": "text"
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding",
+                  "type": "text"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 06 Nov 2026 15:54:17 GMT",
+                  "type": "text"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy",
+                  "type": "text"
+                },
+                {
+                  "key": "via",
+                  "value": "HTTP/2 edgeproxy, 1.1 google",
+                  "type": "text"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "h3=\":443\"; ma=2592000",
+                  "type": "text"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"error\": {\n        \"status\": 400,\n        \"message\": \"Invalid base62 id\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Authentification",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "bd2b4207d3ac472c88edf51f22e78393",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "076fa7d28de947a7bd14e1b70cdf8ca7",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text",
+              "id": 0
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://accounts.spotify.com/api/token",
+          "protocol": "https",
+          "host": [
+            "accounts",
+            "spotify",
+            "com"
+          ],
+          "path": [
+            "api",
+            "token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Authentification",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "text",
+                  "id": 0
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://accounts.spotify.com/api/token",
+              "protocol": "https",
+              "host": [
+                "accounts",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "api",
+                "token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "type": "text"
+            },
+            {
+              "key": "server",
+              "value": "envoy",
+              "type": "text"
+            },
+            {
+              "key": "request-id",
+              "value": "1fc2cbb0-d026-423e-8235-0be0fb02060a",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "x-envoy-upstream-service-time",
+              "value": "4",
+              "type": "text"
+            },
+            {
+              "key": "via",
+              "value": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google, 1.1 varnish",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip",
+              "type": "text"
+            },
+            {
+              "key": "Accept-Ranges",
+              "value": "bytes",
+              "type": "text"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 06 Nov 2026 15:42:08 GMT",
+              "type": "text"
+            },
+            {
+              "key": "X-Served-By",
+              "value": "cache-par-lfpg1960054-PAR",
+              "type": "text"
+            },
+            {
+              "key": "X-Cache",
+              "value": "MISS",
+              "type": "text"
+            },
+            {
+              "key": "X-Cache-Hits",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "X-Timer",
+              "value": "S1793979729.972708,VS0,VE17",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding",
+              "type": "text"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=300",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"access_token\": \"BQCflbhC6uL7rqgVoE4RQfqzw1I3cALY04A5nvxQCjvIXmTjNCmYVDrhpqLXvb8YuF1XrUTKYapjBhrPmuENr6MYusSr2Cskvfw8sDwMlPLjDy4kWk1Gm_D-6H_lW206QtPdDbaml54S\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 3600\n}"
+        }
+      ]
+    },
+    {
+      "name": "Recherche",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.spotify.com/v1/search?q=JUL&type=artist&limit=3",
+          "protocol": "https",
+          "host": [
+            "api",
+            "spotify",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "JUL"
+            },
+            {
+              "key": "type",
+              "value": "artist"
+            },
+            {
+              "key": "limit",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Recherche",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/search?q=JUL&type=artist&limit=3",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "JUL",
+                  "sortOrder": 0
+                },
+                {
+                  "key": "type",
+                  "value": "artist",
+                  "sortOrder": 1
+                },
+                {
+                  "key": "limit",
+                  "value": "3",
+                  "sortOrder": 2
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "\"MC-IjczMDZjNDk4YTNjY2E1NDg0Y2I5MzVhODIzZDM4OGVjIg==\"",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-ttl",
+              "value": "7200",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-policy",
+              "value": "public",
+              "type": "text"
+            },
+            {
+              "key": "x-robots-tag",
+              "value": "noindex, nofollow",
+              "type": "text"
+            },
+            {
+              "key": "mc-etag",
+              "value": "\"7306c498a3cca5484cb935a823d388ec\"",
+              "type": "text"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip",
+              "type": "text"
+            },
+            {
+              "key": "server-timing",
+              "value": "edge;dur=259",
+              "type": "text"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 06 Nov 2026 15:50:02 GMT",
+              "type": "text"
+            },
+            {
+              "key": "server",
+              "value": "envoy",
+              "type": "text"
+            },
+            {
+              "key": "via",
+              "value": "HTTP/2 edgeproxy, 1.1 google",
+              "type": "text"
+            },
+            {
+              "key": "Alt-Svc",
+              "value": "h3=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"artists\": {\n        \"href\": \"https://api.spotify.com/v1/search?offset=0&limit=3&query=JUL&type=artist\",\n        \"limit\": 3,\n        \"next\": \"https://api.spotify.com/v1/search?offset=3&limit=3&query=JUL&type=artist\",\n        \"offset\": 0,\n        \"previous\": null,\n        \"total\": 101,\n        \"items\": [\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/3IW7ScrzXmPvZhB27hmfgy\"\n                },\n                \"href\": \"https://api.spotify.com/v1/artists/3IW7ScrzXmPvZhB27hmfgy\",\n                \"id\": \"3IW7ScrzXmPvZhB27hmfgy\",\n                \"images\": [\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5ebaa70253f73793a0ff061069e\",\n                        \"height\": 640,\n                        \"width\": 640\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174aa70253f73793a0ff061069e\",\n                        \"height\": 320,\n                        \"width\": 320\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178aa70253f73793a0ff061069e\",\n                        \"height\": 160,\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"Jul\",\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:3IW7ScrzXmPvZhB27hmfgy\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                },\n                \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                \"images\": [\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5eb3869679fca4ed2840ceecb41\",\n                        \"height\": 640,\n                        \"width\": 640\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab676161000051743869679fca4ed2840ceecb41\",\n                        \"height\": 320,\n                        \"width\": 320\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f1783869679fca4ed2840ceecb41\",\n                        \"height\": 160,\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"Juliette Armanet\",\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n            },\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/6jStlKLflTMUN6BajxrNlj\"\n                },\n                \"href\": \"https://api.spotify.com/v1/artists/6jStlKLflTMUN6BajxrNlj\",\n                \"id\": \"6jStlKLflTMUN6BajxrNlj\",\n                \"images\": [\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000e5eba7475b5895e9a1d3800d60e4\",\n                        \"height\": 640,\n                        \"width\": 640\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab67616100005174a7475b5895e9a1d3800d60e4\",\n                        \"height\": 320,\n                        \"width\": 320\n                    },\n                    {\n                        \"url\": \"https://i.scdn.co/image/ab6761610000f178a7475b5895e9a1d3800d60e4\",\n                        \"height\": 160,\n                        \"width\": 160\n                    }\n                ],\n                \"name\": \"Julien Doré\",\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:6jStlKLflTMUN6BajxrNlj\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Discographie",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa/albums",
+          "protocol": "https",
+          "host": [
+            "api",
+            "spotify",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "artists",
+            "61CPKXT0bcKj8MKTNTMOXa",
+            "albums"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Discographie",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa/albums",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "artists",
+                "61CPKXT0bcKj8MKTNTMOXa",
+                "albums"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "\"MC-ImJjMTRjMWFjZjVhMTQ5MDBhZDdkNDE4MGMxYmU5MGI4Ig==\"",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-ttl",
+              "value": "7200",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-policy",
+              "value": "public",
+              "type": "text"
+            },
+            {
+              "key": "x-robots-tag",
+              "value": "noindex, nofollow",
+              "type": "text"
+            },
+            {
+              "key": "mc-etag",
+              "value": "\"bc14c1acf5a14900ad7d4180c1be90b8\"",
+              "type": "text"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip",
+              "type": "text"
+            },
+            {
+              "key": "server-timing",
+              "value": "edge;dur=241",
+              "type": "text"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 06 Nov 2026 15:50:20 GMT",
+              "type": "text"
+            },
+            {
+              "key": "server",
+              "value": "envoy",
+              "type": "text"
+            },
+            {
+              "key": "via",
+              "value": "HTTP/2 edgeproxy, 1.1 google",
+              "type": "text"
+            },
+            {
+              "key": "Alt-Svc",
+              "value": "h3=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa/albums?offset=0&limit=5&include_groups=album,single,compilation,appears_on\",\n    \"limit\": 5,\n    \"next\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa/albums?offset=5&limit=5&include_groups=album,single,compilation,appears_on\",\n    \"offset\": 0,\n    \"previous\": null,\n    \"total\": 113,\n    \"items\": [\n        {\n            \"album_type\": \"album\",\n            \"total_tracks\": 19,\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/album/4cpqnqV7914MH1bGNqbS0t\"\n            },\n            \"href\": \"https://api.spotify.com/v1/albums/4cpqnqV7914MH1bGNqbS0t\",\n            \"id\": \"4cpqnqV7914MH1bGNqbS0t\",\n            \"images\": [\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d0000b273be826c23f64937a731deba55\",\n                    \"height\": 640,\n                    \"width\": 640\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00001e02be826c23f64937a731deba55\",\n                    \"height\": 300,\n                    \"width\": 300\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00004851be826c23f64937a731deba55\",\n                    \"height\": 64,\n                    \"width\": 64\n                }\n            ],\n            \"name\": \"Brûler le Feu 2\",\n            \"release_date\": \"2022-11-04\",\n            \"release_date_precision\": \"day\",\n            \"type\": \"album\",\n            \"uri\": \"spotify:album:4cpqnqV7914MH1bGNqbS0t\",\n            \"artists\": [\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                    \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                    \"name\": \"Juliette Armanet\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n                }\n            ]\n        },\n        {\n            \"album_type\": \"album\",\n            \"total_tracks\": 15,\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/album/7ftWS2YkyqOJvh602ob2l5\"\n            },\n            \"href\": \"https://api.spotify.com/v1/albums/7ftWS2YkyqOJvh602ob2l5\",\n            \"id\": \"7ftWS2YkyqOJvh602ob2l5\",\n            \"images\": [\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d0000b273c4dc96ff4ce16154d4e92085\",\n                    \"height\": 640,\n                    \"width\": 640\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00001e02c4dc96ff4ce16154d4e92085\",\n                    \"height\": 300,\n                    \"width\": 300\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00004851c4dc96ff4ce16154d4e92085\",\n                    \"height\": 64,\n                    \"width\": 64\n                }\n            ],\n            \"name\": \"Brûler le feu\",\n            \"release_date\": \"2022-05-25\",\n            \"release_date_precision\": \"day\",\n            \"type\": \"album\",\n            \"uri\": \"spotify:album:7ftWS2YkyqOJvh602ob2l5\",\n            \"artists\": [\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                    \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                    \"name\": \"Juliette Armanet\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n                }\n            ]\n        },\n        {\n            \"album_type\": \"album\",\n            \"total_tracks\": 31,\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/album/1kY0W5GHv77Rlz5w01NeE4\"\n            },\n            \"href\": \"https://api.spotify.com/v1/albums/1kY0W5GHv77Rlz5w01NeE4\",\n            \"id\": \"1kY0W5GHv77Rlz5w01NeE4\",\n            \"images\": [\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d0000b273e19544f4326fe1176d69b399\",\n                    \"height\": 640,\n                    \"width\": 640\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00001e02e19544f4326fe1176d69b399\",\n                    \"height\": 300,\n                    \"width\": 300\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00004851e19544f4326fe1176d69b399\",\n                    \"height\": 64,\n                    \"width\": 64\n                }\n            ],\n            \"name\": \"Petite Amie (Live & Bonus)\",\n            \"release_date\": \"2018-11-02\",\n            \"release_date_precision\": \"day\",\n            \"type\": \"album\",\n            \"uri\": \"spotify:album:1kY0W5GHv77Rlz5w01NeE4\",\n            \"artists\": [\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                    \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                    \"name\": \"Juliette Armanet\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n                }\n            ]\n        },\n        {\n            \"album_type\": \"album\",\n            \"total_tracks\": 17,\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/album/2aVn7kwlqc8OmtEqpmuf3N\"\n            },\n            \"href\": \"https://api.spotify.com/v1/albums/2aVn7kwlqc8OmtEqpmuf3N\",\n            \"id\": \"2aVn7kwlqc8OmtEqpmuf3N\",\n            \"images\": [\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d0000b273d9bdb25b4d88c84a72af5622\",\n                    \"height\": 640,\n                    \"width\": 640\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00001e02d9bdb25b4d88c84a72af5622\",\n                    \"height\": 300,\n                    \"width\": 300\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00004851d9bdb25b4d88c84a72af5622\",\n                    \"height\": 64,\n                    \"width\": 64\n                }\n            ],\n            \"name\": \"Petite Amie (Edition Délice)\",\n            \"release_date\": \"2018-06-22\",\n            \"release_date_precision\": \"day\",\n            \"type\": \"album\",\n            \"uri\": \"spotify:album:2aVn7kwlqc8OmtEqpmuf3N\",\n            \"artists\": [\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                    \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                    \"name\": \"Juliette Armanet\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n                }\n            ]\n        },\n        {\n            \"album_type\": \"single\",\n            \"total_tracks\": 1,\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/album/5N7gbHEwfYuL3CxpDVOVJK\"\n            },\n            \"href\": \"https://api.spotify.com/v1/albums/5N7gbHEwfYuL3CxpDVOVJK\",\n            \"id\": \"5N7gbHEwfYuL3CxpDVOVJK\",\n            \"images\": [\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d0000b273a75907940c2e389beeba36ea\",\n                    \"height\": 640,\n                    \"width\": 640\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00001e02a75907940c2e389beeba36ea\",\n                    \"height\": 300,\n                    \"width\": 300\n                },\n                {\n                    \"url\": \"https://i.scdn.co/image/ab67616d00004851a75907940c2e389beeba36ea\",\n                    \"height\": 64,\n                    \"width\": 64\n                }\n            ],\n            \"name\": \"Attraction\",\n            \"release_date\": \"2026-06-05\",\n            \"release_date_precision\": \"day\",\n            \"type\": \"album\",\n            \"uri\": \"spotify:album:5N7gbHEwfYuL3CxpDVOVJK\",\n            \"artists\": [\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/23ymPLjbtAMzTJS2qRtQ8Z\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/23ymPLjbtAMzTJS2qRtQ8Z\",\n                    \"id\": \"23ymPLjbtAMzTJS2qRtQ8Z\",\n                    \"name\": \"Sébastien Tellier\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:23ymPLjbtAMzTJS2qRtQ8Z\"\n                },\n                {\n                    \"external_urls\": {\n                        \"spotify\": \"https://open.spotify.com/artist/61CPKXT0bcKj8MKTNTMOXa\"\n                    },\n                    \"href\": \"https://api.spotify.com/v1/artists/61CPKXT0bcKj8MKTNTMOXa\",\n                    \"id\": \"61CPKXT0bcKj8MKTNTMOXa\",\n                    \"name\": \"Juliette Armanet\",\n                    \"type\": \"artist\",\n                    \"uri\": \"spotify:artist:61CPKXT0bcKj8MKTNTMOXa\"\n                }\n            ]\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Détail d'un titre",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+          "protocol": "https",
+          "host": [
+            "api",
+            "spotify",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "tracks",
+            "0SGwyiQe9u06OoNVvFjCT9"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Détail d'un titre",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9",
+              "protocol": "https",
+              "host": [
+                "api",
+                "spotify",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "tracks",
+                "0SGwyiQe9u06OoNVvFjCT9"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "\"MC-IjIwMmQ4NDcyODc3NGY1ODUwZTc3YmQzMjBlOTkxMGM5Ig==\"",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-ttl",
+              "value": "7200",
+              "type": "text"
+            },
+            {
+              "key": "mc-cache-policy",
+              "value": "public",
+              "type": "text"
+            },
+            {
+              "key": "x-robots-tag",
+              "value": "noindex, nofollow",
+              "type": "text"
+            },
+            {
+              "key": "mc-etag",
+              "value": "\"202d84728774f5850e77bd320e9910c9\"",
+              "type": "text"
+            },
+            {
+              "key": "content-encoding",
+              "value": "gzip",
+              "type": "text"
+            },
+            {
+              "key": "server-timing",
+              "value": "edge;dur=110",
+              "type": "text"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 06 Nov 2026 15:50:30 GMT",
+              "type": "text"
+            },
+            {
+              "key": "server",
+              "value": "envoy",
+              "type": "text"
+            },
+            {
+              "key": "via",
+              "value": "HTTP/2 edgeproxy, 1.1 google",
+              "type": "text"
+            },
+            {
+              "key": "Alt-Svc",
+              "value": "h3=\":443\"; ma=2592000",
+              "type": "text"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"album\": {\n        \"album_type\": \"album\",\n        \"artists\": [\n            {\n                \"external_urls\": {\n                    \"spotify\": \"https://open.spotify.com/artist/3IW7ScrzXmPvZhB27hmfgy\"\n                },\n                \"href\": \"https://api.spotify.com/v1/artists/3IW7ScrzXmPvZhB27hmfgy\",\n                \"id\": \"3IW7ScrzXmPvZhB27hmfgy\",\n                \"name\": \"Jul\",\n                \"type\": \"artist\",\n                \"uri\": \"spotify:artist:3IW7ScrzXmPvZhB27hmfgy\"\n            }\n        ],\n        \"external_urls\": {\n            \"spotify\": \"https://open.spotify.com/album/75ymIEBQv8zZhnKtabtB9C\"\n        },\n        \"href\": \"https://api.spotify.com/v1/albums/75ymIEBQv8zZhnKtabtB9C\",\n        \"id\": \"75ymIEBQv8zZhnKtabtB9C\",\n        \"images\": [\n            {\n                \"url\": \"https://i.scdn.co/image/ab67616d0000b2733b34412fb2ac7137dd255155\",\n                \"width\": 640,\n                \"height\": 640\n            },\n            {\n                \"url\": \"https://i.scdn.co/image/ab67616d00001e023b34412fb2ac7137dd255155\",\n                \"width\": 300,\n                \"height\": 300\n            },\n            {\n                \"url\": \"https://i.scdn.co/image/ab67616d000048513b34412fb2ac7137dd255155\",\n                \"width\": 64,\n                \"height\": 64\n            }\n        ],\n        \"is_playable\": true,\n        \"name\": \"Oubliez-moi\",\n        \"release_date\": \"2026-05-15\",\n        \"release_date_precision\": \"day\",\n        \"total_tracks\": 21,\n        \"type\": \"album\",\n        \"uri\": \"spotify:album:75ymIEBQv8zZhnKtabtB9C\"\n    },\n    \"artists\": [\n        {\n            \"external_urls\": {\n                \"spotify\": \"https://open.spotify.com/artist/3IW7ScrzXmPvZhB27hmfgy\"\n            },\n            \"href\": \"https://api.spotify.com/v1/artists/3IW7ScrzXmPvZhB27hmfgy\",\n            \"id\": \"3IW7ScrzXmPvZhB27hmfgy\",\n            \"name\": \"Jul\",\n            \"type\": \"artist\",\n            \"uri\": \"spotify:artist:3IW7ScrzXmPvZhB27hmfgy\"\n        }\n    ],\n    \"disc_number\": 1,\n    \"duration_ms\": 229826,\n    \"explicit\": true,\n    \"external_ids\": {\n        \"isrc\": \"FR96X2606353\"\n    },\n    \"external_urls\": {\n        \"spotify\": \"https://open.spotify.com/track/0SGwyiQe9u06OoNVvFjCT9\"\n    },\n    \"href\": \"https://api.spotify.com/v1/tracks/0SGwyiQe9u06OoNVvFjCT9\",\n    \"id\": \"0SGwyiQe9u06OoNVvFjCT9\",\n    \"is_local\": false,\n    \"is_playable\": true,\n    \"name\": \"À la vie, à la mort\",\n    \"track_number\": 7,\n    \"type\": \"track\",\n    \"uri\": \"spotify:track:0SGwyiQe9u06OoNVvFjCT9\"\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "BQA1kJWdpA2oJi3TZ-RCzuL2Xd-cUYzU24YMkjGeJ6ppDn9SchcpkJRtEsfcq7HJgFqUiszH2YXYCDixlOTPRT-wAjbnTuLg8r7qLr19GlesOc2bnhUnWNi9fNLGxa6VM_W8JBAUivuw",
+      "type": "string"
+    }
+  ]
+}
